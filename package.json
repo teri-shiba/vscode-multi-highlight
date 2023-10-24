@@ -1,0 +1,77 @@
+{
+  "name": "multi-highlight",
+  "displayName": "Multi-Highlight",
+  "description": "Highlight multiple words at once with different colours.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "homepage": "https://github.com/chrisjdavies/vscode-multi-highlight",
+  "publisher": "chrisjdavies",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisjdavies/vscode-multi-highlight.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chrisjdavies/vscode-multi-highlight/issues"
+  },
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "highlight",
+    "multi",
+    "color",
+    "colour"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "multi-highlight.addHighlight",
+        "title": "Multi-Highlight: Add Highlight"
+      },
+      {
+        "command": "multi-highlight.removeHighlight",
+        "title": "Multi-Highlight: Remove Highlight"
+      },
+      {
+        "command": "multi-highlight.clearHighlights",
+        "title": "Multi-Highlight: Clear Highlights"
+      }
+    ],
+    "configuration": {
+      "title": "Multi-Highlight",
+      "properties": {
+        "multi-highlight.colours": {
+          "type": "string",
+          "default": "yellow:black, blue:white, red:white, green:white, purple:white, orange:white",
+          "description": "A comma-separated list of background:foreground highlight colours to cycle through."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.83.0",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}
