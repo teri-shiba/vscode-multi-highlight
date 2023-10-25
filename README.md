@@ -14,7 +14,7 @@ help clarify their use in the function being analysed:
 
 ## Commands
 
-Multi-Highlight adds the following commands to the command pallette:
+Multi-Highlight adds the following commands to the command palette:
 
 - Multi-Highlight: Add Highlight
 - Multi-Highlight: Remove Highlight
