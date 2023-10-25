@@ -38,8 +38,33 @@ The default list of colours is:
 
 Colours can be specified by name or using HTML syntax: `#d0d0d0`.
 
+## Key Bindings
+
+Multi-Highlight doesn't come with default key bindings, but I personally use the
+following with [VSCodeVim](https://github.com/VSCodeVim/Vim) to mimic
+[vim-highlighter](https://github.com/azabiong/vim-highlighter):
+
+```json
+{
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["g", "<cr>"],
+            "commands": ["multi-highlight.addHighlight"]
+        },
+        {
+            "before": ["g", "<bs>"],
+            "commands": ["multi-highlight.removeHighlight"]
+        },
+        {
+            "before": ["g", "<C-l>"],
+            "commands": ["multi-highlight.clearHighlights"]
+        }
+    ]
+}
+```
+
 ## Thanks
 
 - Thanks to [vim-highlighter](https://github.com/azabiong/vim-highlighter) for
-  the inspiration; I miss having this in vim.
+  the inspiration.  I use this a lot in vim.
 - Thanks to DALL-E 3 for generating the icon/logo.
