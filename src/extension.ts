@@ -33,7 +33,7 @@ function getMatches(word: string): vscode.DecorationOptions[] {
 
 	if (editor) {
 		const text = editor.document.getText();
-		const regex = new RegExp(escapeRegExp(word), 'g');
+		const regex = new RegExp('\\b' + escapeRegExp(word) + '\\b', 'g');
 
 		let match;
 

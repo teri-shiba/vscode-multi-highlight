@@ -2,7 +2,7 @@
   "name": "multi-highlight",
   "displayName": "Multi-Highlight",
   "description": "Highlight multiple words at once with different colours.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "homepage": "https://github.com/chrisjdavies/vscode-multi-highlight",
   "publisher": "chrisjdavies",
