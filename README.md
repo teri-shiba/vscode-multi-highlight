@@ -3,7 +3,8 @@
 ![Multi-Highlight](images/icon.png)
 
 Multi-Highlight is a Visual Studio Code extension for highlighting multiple
-words with different and customisable colours.
+words with different and customisable colours.  It's designed to help keep track
+of multiple variables while auditing or understanding code.
 
 ## Example
 
