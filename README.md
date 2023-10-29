@@ -6,6 +6,11 @@ Multi-Highlight is a Visual Studio Code extension for highlighting multiple
 words with different and customisable colours.  It's designed to help keep track
 of multiple variables while auditing or understanding code.
 
+## Installation
+
+Install through the Visual Studio Code Marketplace:
+https://marketplace.visualstudio.com/items?itemName=chrisjdavies.multi-highlight
+
 ## Example
 
 See the following screenshot in which I've highlighted three different words to
