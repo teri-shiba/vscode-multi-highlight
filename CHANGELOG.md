@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.0.4]
+
+- Icon update.
+
 ## [0.0.3]
 
 - Be smarter about which highlight colour to use next: use the last-cleared.
