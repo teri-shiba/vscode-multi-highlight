@@ -61,6 +61,20 @@ function removeHighlightForWord(word: string) {
 
 	editor.setDecorations(highlightDecorations[index], []);
 	highlightWords[index] = undefined;
+	nextHighlight = index;
+}
+
+function chooseNextHighlight(): number {
+	const start = nextHighlight;
+	let looped = false;
+	let idx = nextHighlight;
+
+	while (highlightWords[idx] && !looped) {
+		idx = (idx + 1) % highlightDecorations.length;
+		looped = (idx === start);
+	}
+
+	return idx;
 }
 
 function addHighlight() {
@@ -77,10 +91,11 @@ function addHighlight() {
 	// We need to remove any highlight first since decorations accumulate.
 	removeHighlightForWord(word);
 
-	const decoration = highlightDecorations[nextHighlight];
-	highlightWords[nextHighlight] = word;
+	const idx = chooseNextHighlight();
+	const decoration = highlightDecorations[idx];
+	highlightWords[idx] = word;
 
-	nextHighlight = (nextHighlight + 1) % highlightDecorations.length;
+	nextHighlight = (idx + 1) % highlightDecorations.length;
 
 	editor.setDecorations(decoration, getMatches(word));
 }
