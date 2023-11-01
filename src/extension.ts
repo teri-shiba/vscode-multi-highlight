@@ -125,6 +125,11 @@ function clearHighlights() {
 	nextHighlight = 0;
 }
 
+function freshHighlight() {
+	clearHighlights();
+	addHighlight();
+}
+
 export function activate(context: vscode.ExtensionContext) {
 	const config = vscode.workspace.getConfiguration('multi-highlight');
 	const colours = (config.get<string>('colours') || DEFAULT_COLOURS).split(',').map(p => p.trim().split(':').map(c => c.trim()));
@@ -142,6 +147,7 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.commands.registerCommand('multi-highlight.addHighlight', () => { addHighlight(); }),
 		vscode.commands.registerCommand('multi-highlight.removeHighlight', () => { removeHighlight(); }),
 		vscode.commands.registerCommand('multi-highlight.clearHighlights', () => { clearHighlights(); }),
+		vscode.commands.registerCommand('multi-highlight.freshHighlight', () => { freshHighlight(); }),
 	];
 
 	commands.forEach(cmd => context.subscriptions.push(cmd));

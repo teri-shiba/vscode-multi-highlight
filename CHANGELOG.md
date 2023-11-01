@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.0.5]
+
+- Add _Fresh Highlight_ command.
+
 ## [0.0.4]
 
 - Icon update.

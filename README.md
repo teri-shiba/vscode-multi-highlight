@@ -25,6 +25,7 @@ Multi-Highlight adds the following commands to the command palette:
 - Multi-Highlight: Add Highlight
 - Multi-Highlight: Remove Highlight
 - Multi-Highlight: Clear Highlights
+- Multi-Highlight: Fresh Highlight
 
 Add and Remove operate on the word currently under the cursor.
 
@@ -65,6 +66,10 @@ following in my `settings.json` with
         {
             "before": ["g", "<C-l>"],
             "commands": ["multi-highlight.clearHighlights"]
+        },
+        {
+            "before": ["g", "<space>"],
+            "commands": ["multi-highlight.freshHighlight"]
         }
     ]
 }

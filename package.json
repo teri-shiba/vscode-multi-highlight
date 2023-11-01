@@ -2,7 +2,7 @@
   "name": "multi-highlight",
   "displayName": "Multi-Highlight",
   "description": "Highlight multiple words at once with different colours.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "homepage": "https://github.com/chrisjdavies/vscode-multi-highlight",
   "publisher": "chrisjdavies",
@@ -41,6 +41,10 @@
       {
         "command": "multi-highlight.clearHighlights",
         "title": "Multi-Highlight: Clear Highlights"
+      },
+      {
+        "command": "multi-highlight.freshHighlight",
+        "title": "Multi-Highlight: Fresh Highlight"
       }
     ],
     "configuration": {
