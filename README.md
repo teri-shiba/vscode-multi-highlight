@@ -26,8 +26,9 @@ Multi-Highlight adds the following commands to the command palette:
 - Multi-Highlight: Remove Highlight
 - Multi-Highlight: Clear Highlights
 - Multi-Highlight: Fresh Highlight
+- Multi-Highlight: Toggle Highlight
 
-Add and Remove operate on the word currently under the cursor.
+Add, Remove and Toggle operate on the word currently under the cursor.
 
 ## Configuration
 
@@ -77,6 +78,8 @@ following in my `settings.json` with
 
 ## Thanks
 
+- Thanks to [chasonyu](https://github.com/chasonyu) for implementing the Toggle
+  Highlight feature.
 - Thanks to [vim-highlighter](https://github.com/azabiong/vim-highlighter) for
   the inspiration.  I use this a lot in vim.
 - Thanks to DALL-E 3 for generating the icon/logo.

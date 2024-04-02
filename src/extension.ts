@@ -130,7 +130,7 @@ function freshHighlight() {
 	addHighlight();
 }
 
-function toggleHightlight() {
+function toggleHighlight() {
 	const editor = vscode.window.activeTextEditor;
 	if (!editor) {
 		return;
@@ -167,7 +167,7 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.commands.registerCommand('multi-highlight.removeHighlight', () => { removeHighlight(); }),
 		vscode.commands.registerCommand('multi-highlight.clearHighlights', () => { clearHighlights(); }),
 		vscode.commands.registerCommand('multi-highlight.freshHighlight', () => { freshHighlight(); }),
-		vscode.commands.registerCommand('multi-highlight.toggleHighlight', () => { toggleHightlight(); }),
+		vscode.commands.registerCommand('multi-highlight.toggleHighlight', () => { toggleHighlight(); }),
 	];
 
 	commands.forEach(cmd => context.subscriptions.push(cmd));
