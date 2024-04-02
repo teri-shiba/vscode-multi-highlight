@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.0.6]
+
+- Merge @chasonyu's PR to add `toggleHighlight`.
+
 ## [0.0.5]
 
 - Add _Fresh Highlight_ command.
